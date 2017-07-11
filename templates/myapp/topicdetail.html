@@ -1,0 +1,39 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+
+            {% if topicdetails %}
+        <h2>List of Topics</h2>
+        <table>
+        <tr>
+            <td>Subject:</td>
+            <td>{{ topicdetails.subject }}</td>
+        </tr>
+        <tr>
+            <td>people interested in the Topic:</td>
+            <td>{{ topicdetails.num_responses }}</td>
+        </tr>
+        <tr>
+            <td>Introductory Course</td>
+            <td>{{ topicdetails.intro_course }}</td>
+        </tr>
+        <tr>
+            <td>Average Age for the Course:</td>
+            <td>{{ topicdetails.avg_age }}</td>
+        </tr>
+        </table>
+
+         <hr />
+         <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_ul }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+    {% else %}
+        <strong>There are no available courses!</strong>
+    {% endif %}
+
+
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    color:black;
+    margin: 0 auto;
+    width: 1024px;
+    background-size: 100%;
+    /*background-color: gray;*/
+}
+.bdycenter
+{
+    width: 500px;
+    margin: 0 auto;
+    /*text-align: center;*/
+}
+
+h2{
+    text-align: center;
+}
+.hbar1 {
+    display: inline;
+    margin: 15px;
+}
+li.hbar1
+{
+    margin-left: 0px;
+}
+ul
+{
+    padding-left: 0px;
+}
+.listtopics
+{
+    margin-left: 20px;
+}
+ol
+{
+    padding-left: 0px;
+}

@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+ {% if topiclist %}
+        <h3>List of Topics</h3>
+        <ul class="listtopics">
+               {% for topic in topiclist %}
+
+                   <li> <a class="linkref" href="{% url 'myapp:topicdetail' topic.id %}">{{topic.subject}}</a>
+                   </li>
+
+               {% endfor %}
+        <br />
+            <a href="{% url 'myapp:addtopic' %}">Add a New Topic</a>
+        </ul>
+    {% else %}
+        <strong>There are no available Topics!</strong>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Details</title>
+</head>
+<body>
+    {% if course %}
+        <h2>Course Details</h2>
+        <label>Course Number: {{ course.course_no }}</label>
+        <br/>
+        <label>Course Title: {{ course.title }}</label>
+        <br/>
+        <label>Book Title: {{ course.textbook.title }}</label>
+    {% else %}
+        <strong>There are no available courses!</strong>
+    {% endif %}
+    <p><a href={% url 'myapp:index' %}>Index page</a></p>
+</body>
+</html>
